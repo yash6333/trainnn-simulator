@@ -1,0 +1,20 @@
+# Compiled binaries
+*.exe
+*.out
+*.o
+*.obj
+
+# Build directories
+build/
+bin/
+out/
+
+# VS Code settings
+.vscode/
+
+# MinGW / GCC temp files
+*.d
+
+# Windows specific
+Thumbs.db
+Desktop.ini

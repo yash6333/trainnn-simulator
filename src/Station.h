@@ -14,13 +14,13 @@ class Station {
         int trainCount;
 
     public:
-        Station (){
+        Station(){
             stationID = 0;
             stationName = "";
             trainCount = 0;
         }    
 
-        int getStationID (){
+        int getStationID(){
             return stationID;
         }
 
@@ -28,15 +28,15 @@ class Station {
             return stationName;
         }
 
-        void setStationID (int id){
+        void setStationID(int id){
             stationID = id;
         }
 
-        void setStationName (string name){
+        void setStationName(string name){
             stationName = name;
         }
 
-        void addTrain (Train t){
+        void addTrain(Train t){
             if (trainCount == 5) {
                 cout << "Station is full!" << endl;
                 return;
@@ -45,7 +45,7 @@ class Station {
             trainCount++;
         }
 
-        void displayStation (){
+        void displayStation(){
             cout << "Station ID: "<<stationID<<" | Name: "<<stationName<<endl;
             if (trainCount == 0) {
                 cout << "No trains parked." << endl;

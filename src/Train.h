@@ -1,12 +1,14 @@
 #ifndef TRAIN_H
 #define TRAIN_H
+
 #include <iostream>
 #include <string>
+
 using namespace std;
 
 class Train
 {
-    private:
+private:
     int trainNumber;
     string trainName;
     string source;
@@ -18,8 +20,8 @@ class Train
     string trainType;
     int cargoWeight;
 
-    public:
-    Train()  //constructor
+public:
+    Train()
     {
         trainNumber = 0;
         trainName = "";
@@ -32,7 +34,7 @@ class Train
         trainType = "";
         cargoWeight = 0;
     }
-    // Get functions
+
     int getTrainNumber()
     {
         return trainNumber;
@@ -82,79 +84,83 @@ class Train
     {
         return cargoWeight;
     }
-    
-    // Set Functions
+
     void setTrainNumber(int number) 
     {
-    if (number > 0) 
-    {
-        trainNumber = number;
-    } 
-    else
-    {
-        cout << "Invalid Train Number" << endl;
+        if (number > 0) 
+        {
+            trainNumber = number;
+        } 
+        else
+        {
+            cout << "Invalid Train Number" << endl;
+        }
     }
-    }
+
     void setTrainName(string n) 
     {
         trainName = n;
     }
 
-    void setSource(string s)
+    void setSource(string s) 
     {
         source = s;
     }
-    void setDestination(string d)
+
+    void setDestination(string d) 
     {
         destination = d;
     }
-    void setDepartureTime(string t)
+
+    void setDepartureTime(string t) 
     {
         departureTime = t;
     }
-    void setArrivalTime(string t)
+
+    void setArrivalTime(string t) 
     {
         arrivalTime = t;
     }
-    void setPriority(int p)
+
+    void setPriority(int p) 
     {
         priority = p;
     }
-    void setDelay(int d)
+
+    void setDelay(int d) 
     {
         delay = d;
     }
-    void setTrainType(string t)
+
+    void setTrainType(string t) 
     {
         trainType = t;
     }
-    void setCargoWeight(int w)
+
+    void setCargoWeight(int w) 
     {
         cargoWeight = w;
     }
-    // utility functions
+
     void updateDelay(int minutes)
     {
         delay += minutes;
     }
+
     void display()
-{
-    cout << "\n-----------------------------------" << endl;
-    cout << "Train Number: " << trainNumber << endl;
-    cout << "Train Name: " << trainName << " (" << trainType << ")" << endl;
-    cout << "Route: " << source << " -> " << destination << endl;
-    cout << "Departure: " << departureTime << " | Arrival: " << arrivalTime << endl;
-    cout << "Priority: " << priority << " | Delay: " << delay << " mins" << endl;
-    if (trainType == "Cargo")
     {
-        cout << "Cargo Weight: " << cargoWeight << " tonnes" << endl;
+        cout << "\n-----------------------------------" << endl;
+        cout << "Train Number: " << trainNumber << endl;
+        cout << "Train Name: " << trainName << " (" << trainType << ")" << endl;
+        cout << "Route: " << source << " -> " << destination << endl;
+        cout << "Departure: " << departureTime << " | Arrival: " << arrivalTime << endl;
+        cout << "Priority: " << priority << " | Delay: " << delay << " mins" << endl;
+        if (trainType == "Cargo")
+        {
+            cout << "Cargo Weight: " << cargoWeight << " tonnes" << endl;
+        }
+        cout << "-----------------------------------" << endl;
     }
-    cout << "-----------------------------------" << endl;
-}
-
 };
-
-
-
 
 #endif
